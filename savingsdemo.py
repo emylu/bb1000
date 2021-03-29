@@ -1,4 +1,5 @@
 import sys
+import argparse
 
 def calculate_savings(amount, annual_rate, total_years):
     """
@@ -20,12 +21,14 @@ def calculate_savings(amount, annual_rate, total_years):
 #print("Total value after 2 years", total)
 #print(sys.argv)
 
-try:
-    amount = int(sys.argv[1])
-    rate = float(sys.argv[2])
-    year = int(sys.argv[3])
-except IndexError:
-    print("Usage: savingsdemo.py amout rate year")
-    exit()
+if __name__ == "__main__":
 
-print("Final value", calculate_savings(amount, rate, year)[-1])
+    try:
+        amount = int(sys.argv[1])
+        rate = float(sys.argv[2])
+        year = int(sys.argv[3])
+    except IndexError:
+        print("Usage: savingsdemo.py amout rate year")
+        exit()
+
+    print("Final value", calculate_savings(amount, rate, year)[-1])
