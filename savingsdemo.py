@@ -7,7 +7,6 @@ def calculate_savings(amount, annual_rate, total_years):
     saving amout and annual rate
     """
     total = 0
-    # global total
     history = []
     for year in range(total_years):
         total = total + amount
@@ -18,8 +17,6 @@ def calculate_savings(amount, annual_rate, total_years):
 
     return history
 
-#print("Total value after 2 years", total)
-#print(sys.argv)
 
 if __name__ == "__main__":
 
